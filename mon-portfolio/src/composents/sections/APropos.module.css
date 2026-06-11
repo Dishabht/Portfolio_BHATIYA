@@ -1,0 +1,128 @@
+.section {
+  background: var(--black);
+  border-top: 1px solid var(--border-dark);
+  padding: 128px 48px;
+  text-align: center;
+}
+
+/* ── Titre ── */
+.title {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 64px;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.title.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Corps ── */
+.body {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.paragraph {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.paragraph.in {
+  opacity: 1;
+  transform: none;
+}
+
+.signature {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #ffffff;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.signature.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Bouton CV ── */
+.cvBtn {
+  display: inline-block;
+  margin-top: 48px;
+  padding: 20px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease, transform 0.8s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cvBtn.in {
+  opacity: 1;
+  transform: none;
+}
+
+.cvBtn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .body {
+    gap: 24px;
+  }
+
+  .cvBtn {
+    padding: 16px 28px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 64px 16px;
+  }
+
+  .title {
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,449 @@
+.page {
+  background: #0a0a0a;
+  min-height: 100vh;
+}
+
+/* Back */
+.back {
+  position: fixed;
+  top: 80px;
+  left: 48px;
+  z-index: 100;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.back:hover {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: #0a0a0a;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.filigrane {
+  position: absolute;
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: clamp(180px, 22vw, 260px);
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -8px;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.heroCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  z-index: 1;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.title {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -1px;
+  max-width: 600px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 22px;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+
+.bottomLeft,
+.bottomRight {
+  position: absolute;
+  bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bottomLeft {
+  left: 64px;
+}
+
+.bottomRight {
+  right: 64px;
+  text-align: right;
+}
+
+.bottomLeft span,
+.bottomRight span {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+.section {
+  padding: 64px;
+}
+
+.sectionNoPaddingTop {
+  padding: 0 64px 64px;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.sectionLabelText {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.sectionLabelLine {
+  flex: 1;
+  height: 0.5px;
+  background: #161616;
+}
+
+/* AC */
+.acList {
+  display: flex;
+  flex-direction: column;
+}
+
+.acRow {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 0.5px solid #111;
+  cursor: default;
+}
+
+.acRow:first-child {
+  border-top: 0.5px solid #111;
+}
+
+.acNum {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.2);
+  padding-top: 2px;
+  transition: color 200ms ease;
+}
+
+.acText {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  transition: color 200ms ease;
+}
+
+.acRow:hover .acNum {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.acRow:hover .acText {
+  color: #fff;
+}
+
+/* Traces */
+.tracesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.traceCard {
+  background: #0f0f0f;
+  border: 0.5px solid #111;
+  padding: 28px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  position: relative;
+}
+
+.traceCard:hover {
+  background: #141414;
+  border-color: #222;
+}
+
+.traceCardFull {
+  grid-column: 1 / -1;
+}
+
+.traceLabel {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 12px;
+}
+
+.traceTitre {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 10px;
+  transition: color 200ms ease;
+}
+
+.traceCard:hover .traceTitre {
+  color: #fff;
+}
+
+.traceDesc {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.traceTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.traceTag {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.25);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1px;
+  padding: 2px 8px;
+  background: transparent;
+}
+
+.traceArrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.traceCard:hover .traceArrow {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Analyse */
+.analyseBlock {
+  border: 0.5px solid #111;
+  padding: 40px;
+  position: relative;
+}
+
+.analyseInnerLabel {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 24px;
+}
+
+.analyseText {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.9;
+  font-style: italic;
+}
+
+.analyseBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.2);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 10px;
+  border-radius: 1px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .back {
+    left: 20px;
+    top: 72px;
+  }
+
+  .heroCenter {
+    padding: 0 20px;
+  }
+
+  .bottomLeft,
+  .bottomRight {
+    display: none;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .sectionNoPaddingTop {
+    padding: 0 20px 40px;
+  }
+
+  .tracesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .traceCardFull {
+    grid-column: auto;
+  }
+
+  .analyseBlock {
+    padding: 24px 20px;
+  }
+
+  .footerNav {
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 32px 16px;
+  }
+
+  .sectionNoPaddingTop {
+    padding: 0 16px 32px;
+  }
+
+  .acRow {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+
+  .traceCard {
+    padding: 20px;
+  }
+
+  .footerLinks {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Footer nav */
+.footerNav {
+  margin-top: 64px;
+  border-top: 0.5px solid #111;
+  padding: 32px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerCopy {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.footerLink {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.footerLink:hover {
+  color: #fff;
+}
+
+.footerLinkActive {
+  color: rgba(255, 255, 255, 0.5);
+}

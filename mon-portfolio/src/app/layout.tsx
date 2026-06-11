@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Space_Grotesk, Syne } from "next/font/google";
+import { Inter, Playfair_Display, Space_Grotesk, Syne, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/composents/layout/Navbar";
 import Footer from "@/composents/layout/Footer";
@@ -34,6 +34,13 @@ const syne = Syne({
   display: "swap",
 });
 
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-raleway",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Disha.BHT — Portfolio BUT3",
   description: "Portfolio de compétences BUT3 Informatique, Parcours A – RACDV, IUT Créteil-Vitry.",
@@ -41,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${playfair.variable} ${spaceGrotesk.variable} ${inter.variable} ${syne.variable}`}>
+    <html lang="fr" className={`${playfair.variable} ${spaceGrotesk.variable} ${inter.variable} ${syne.variable} ${raleway.variable}`}>
       <body>
         <CustomCursor />
         <Navbar />

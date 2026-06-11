@@ -1,7 +1,8 @@
 .hero {
   background: #eeebe4;
+  width: 100%;
   flex: 1;
-  min-height: 0;
+  min-height: calc(100vh - 110px);
   position: relative;
   display: flex;
   align-items: center;
@@ -16,26 +17,16 @@
   align-items: center;
   text-align: center;
   gap: 32px;
+  padding: 0 24px;
 }
 
 .name {
   font-family: var(--font-syne), system-ui, sans-serif;
-  font-size: clamp(52px, 7vw, 80px);
+  font-size: clamp(40px, 10vw, 80px);
   font-weight: 800;
   color: #2d2d3d;
   letter-spacing: -2px;
   line-height: 0.9;
-}
-
-.nameItalic {
-  font-style: italic;
-}
-
-.nameSans {
-  font-family: var(--font-space), system-ui, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: -3px;
 }
 
 .pill {
@@ -83,13 +74,34 @@
 }
 
 @media (max-width: 768px) {
-  .name {
-    font-size: clamp(52px, 14vw, 88px);
-    letter-spacing: -2px;
-  }
-
   .bottomLeft,
   .bottomRight {
     display: none;
+  }
+
+  .center {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 16px;
+  }
+
+  .center {
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .name {
+    letter-spacing: -1px;
+  }
+
+  .pill {
+    font-size: 10px;
+    padding: 8px 20px;
+    letter-spacing: 2px;
   }
 }

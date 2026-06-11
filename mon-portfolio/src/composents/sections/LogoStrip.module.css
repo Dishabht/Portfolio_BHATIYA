@@ -57,6 +57,22 @@
   to   { transform: translateX(calc(-100% / 3)); }
 }
 
+@media (max-width: 640px) {
+  .inner {
+    margin: 0 16px;
+  }
+
+  .set {
+    gap: 56px;
+    padding-right: 56px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .track {
     animation: none;

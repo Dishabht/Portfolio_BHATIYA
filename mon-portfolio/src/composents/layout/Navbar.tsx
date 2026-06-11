@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className={styles.nav} id="top-navbar">
       <Link href="/" className={styles.logo}>
-        {" disha.bht"}
+        disha.bht
       </Link>
 
       <div className={styles.center}>

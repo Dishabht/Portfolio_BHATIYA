@@ -36,7 +36,7 @@ export default function Footer() {
           <p className={styles.label}>Contact</p>
           <nav className={styles.colLinks}>
             <a
-              href="https://www.linkedin.com/in/hanah-sahmoune-519419308/"
+              href="https://www.linkedin.com/in/disha-bhatiya-0727282b3/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.colLink}
@@ -44,14 +44,14 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/sahHanah44"
+              href="https://github.com/dishabht"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.colLink}
             >
               GitHub
             </a>
-            <a href="mailto:thivishan04@gmail.com" className={styles.colLink}>
+            <a href="mailto:dishabh10@gmail.com" className={styles.colLink}>
               Email
             </a>
           </nav>
