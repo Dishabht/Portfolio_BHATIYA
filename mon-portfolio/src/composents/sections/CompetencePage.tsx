@@ -20,6 +20,7 @@ interface CompetencePageProps {
   acs: AC[];
   traces: Trace[];
   activeNav: "C1" | "C2" | "C6";
+  tracesNode?: React.ReactNode;
 }
 
 const navLinks = [
@@ -36,6 +37,7 @@ export default function CompetencePage({
   acs,
   traces,
   activeNav,
+  tracesNode,
 }: CompetencePageProps) {
   return (
     <div className={styles.page}>
@@ -52,15 +54,7 @@ export default function CompetencePage({
           <span className={styles.pill}>Niveau 3</span>
         </div>
 
-        <div className={styles.bottomLeft}>
-          <span>BUT3 Informatique</span>
-          <span>Parcours A – RACDV</span>
-        </div>
 
-        <div className={styles.bottomRight}>
-          <span>SAé 6.05 · SAé 6.06</span>
-          <span>Stage 2024–2025</span>
-        </div>
       </section>
 
       {/* 01 — AC */}
@@ -72,8 +66,8 @@ export default function CompetencePage({
 
         <div className={styles.acList}>
           {acs.map((ac) => (
-            <div key={ac.num} className={styles.acRow}>
-              <span className={styles.acNum}>{ac.num}</span>
+            <div key={ac.num} id={`ac${parseInt(ac.num.replace("AC", ""))}`} className={styles.acRow}>
+              <span className={styles.acNum}>{"AC" + parseInt(ac.num.replace("AC", ""))}</span>
               <p className={styles.acText}>{ac.texte}</p>
             </div>
           ))}
@@ -81,49 +75,36 @@ export default function CompetencePage({
       </section>
 
       {/* 02 — Traces */}
-      <section className={styles.sectionNoPaddingTop}>
-        <div className={styles.sectionLabel}>
-          <span className={styles.sectionLabelText}>02 — TRACES & PREUVES</span>
-          <div className={styles.sectionLabelLine} />
-        </div>
+      {tracesNode ?? (
+        <section className={styles.sectionNoPaddingTop}>
+          <div className={styles.sectionLabel}>
+            <span className={styles.sectionLabelText}>02 — TRACES & PREUVES</span>
+            <div className={styles.sectionLabelLine} />
+          </div>
 
-        <div className={styles.tracesGrid}>
-          {traces.map((trace) => (
-            <div
-              key={trace.label}
-              className={`${styles.traceCard} ${trace.fullWidth ? styles.traceCardFull : ""}`}
-            >
-              <p className={styles.traceLabel}>{trace.label}</p>
-              <p className={styles.traceTitre}>À compléter</p>
-              <p className={styles.traceDesc}></p>
-              <div className={styles.traceTags}>
-                {trace.tags.map((tag) => (
-                  <span key={tag} className={styles.traceTag}>{tag}</span>
-                ))}
+          <div className={styles.tracesGrid}>
+            {traces.map((trace) => (
+              <div
+                key={trace.label}
+                className={`${styles.traceCard} ${trace.fullWidth ? styles.traceCardFull : ""}`}
+              >
+                <p className={styles.traceLabel}>{trace.label}</p>
+                <p className={styles.traceTitre}>À compléter</p>
+                <p className={styles.traceDesc}></p>
+                <div className={styles.traceTags}>
+                  {trace.tags.map((tag) => (
+                    <span key={tag} className={styles.traceTag}>{tag}</span>
+                  ))}
+                </div>
+                <span className={styles.traceArrow}>→</span>
               </div>
-              <span className={styles.traceArrow}>→</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 03 — Analyse */}
-      <section className={styles.section}>
-        <div className={styles.sectionLabel}>
-          <span className={styles.sectionLabelText}>03 — ANALYSE RÉFLEXIVE</span>
-          <div className={styles.sectionLabelLine} />
-        </div>
-
-        <div className={styles.analyseBlock}>
-          <span className={styles.analyseBadge}>À RÉDIGER</span>
-          <p className={styles.analyseInnerLabel}>VOTRE TEXTE ICI</p>
-          <p className={styles.analyseText}>À rédiger — votre analyse réflexive ici.</p>
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Footer nav */}
       <nav className={styles.footerNav}>
-        <span className={styles.footerCopy}>2025 © disha.bht</span>
         <div className={styles.footerLinks}>
           {navLinks.map((link) => (
             <Link

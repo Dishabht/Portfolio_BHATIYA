@@ -1,4 +1,5 @@
 import CompetencePage from "@/composents/sections/CompetencePage";
+import TracesC1 from "@/composents/sections/TracesC1";
 
 export default function C1Page() {
   return (
@@ -12,12 +13,9 @@ export default function C1Page() {
         { num: "AC02", texte: "Faire évoluer une application existante" },
         { num: "AC03", texte: "Intégrer des solutions dans un environnement de production" },
       ]}
-      traces={[
-        { label: "SAé 6.05", tags: ["AC01", "AC02"] },
-        { label: "SAé 6.06", tags: ["AC02", "AC03"] },
-        { label: "Stage 2024–2025", tags: ["AC01", "AC02", "AC03"], fullWidth: true },
-      ]}
+      traces={[]}
       activeNav="C1"
+      tracesNode={<TracesC1 />}
     />
   );
 }

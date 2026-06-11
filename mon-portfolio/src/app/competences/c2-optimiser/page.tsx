@@ -1,4 +1,5 @@
 import CompetencePage from "@/composents/sections/CompetencePage";
+import TracesC2 from "@/composents/sections/TracesC2";
 
 export default function C2Page() {
   return (
@@ -8,16 +9,13 @@ export default function C2Page() {
       titre="Optimiser des applications"
       sousTitre="Analyser et optimiser selon des critères de performance"
       acs={[
-        { num: "AC01", texte: "Anticiper les résultats de métriques (temps d'exécution, mémoire…)" },
+        { num: "AC01", texte: "Anticiper les résultats de diverses métriques (temps d'exécution, occupation mémoire…)" },
         { num: "AC02", texte: "Profiler, analyser et justifier le comportement d'un code existant" },
-        { num: "AC03", texte: "Choisir des bibliothèques et méthodes dédiées au domaine" },
+        { num: "AC03", texte: "Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application" },
       ]}
-      traces={[
-        { label: "SAé 6.05", tags: ["AC01", "AC02"] },
-        { label: "SAé 6.06", tags: ["AC02", "AC03"] },
-        { label: "Stage 2024–2025", tags: ["AC01", "AC02", "AC03"], fullWidth: true },
-      ]}
+      traces={[]}
       activeNav="C2"
+      tracesNode={<TracesC2 />}
     />
   );
 }

@@ -40,11 +40,13 @@
   font-weight: 400;
   color: #2d2d3d;
   text-decoration: none;
-  transition: opacity 150ms ease;
+  display: inline-block;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
 }
 
 .link:hover {
-  opacity: 0.5;
+  transform: translateY(-3px);
+  opacity: 0.6;
 }
 
 /* ── Tablet : réduire padding et gap ── */

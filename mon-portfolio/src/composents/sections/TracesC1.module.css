@@ -1,0 +1,186 @@
+.section {
+  padding: 0 64px 64px;
+}
+
+/* ── En-tête section ── */
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+.sectionLabelText {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.sectionLabelLine {
+  flex: 1;
+  height: 0.5px;
+  background: #161616;
+}
+
+/* ── Séparateur AC ── */
+.acSep {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0 0;
+}
+
+.acSepNum {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #333;
+  white-space: nowrap;
+}
+
+.acSepLine {
+  flex: 1;
+  height: 0.5px;
+  background: #1a1a1a;
+}
+
+/* ── Ligne preuve ── */
+.preuveRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 0.5px solid #111;
+  min-height: 260px;
+  margin-top: 12px;
+}
+
+/* Gauche */
+.preuveLeft {
+  padding: 28px 32px 24px;
+  border-right: 0.5px solid #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0a0a0a;
+}
+
+.source {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555;
+  margin: 0 0 14px;
+}
+
+.texte {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #aaa;
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.tag:hover {
+  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Droite */
+.preuveRight {
+  display: flex;
+  flex-direction: column;
+  background: #0a0a0a;
+  padding: 16px 16px 12px;
+}
+
+.imageWrapper {
+  position: relative;
+  flex: 1;
+  min-height: 180px;
+  background: #111;
+  border-radius: 3px;
+  border: 0.5px solid #1a1a1a;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 300ms ease;
+}
+
+.preuveRight:hover .image {
+  opacity: 1;
+}
+
+.imagePlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+.imageCaption {
+  padding: 8px 2px 0;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 1px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .section { padding: 0 20px 40px; }
+
+  .preuveRow {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .preuveLeft {
+    border-right: none;
+    border-bottom: 0.5px solid #111;
+  }
+
+  .preuveRight {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 0 16px 32px; }
+  .preuveLeft { padding: 20px 16px; }
+}

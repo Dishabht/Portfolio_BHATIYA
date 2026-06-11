@@ -42,7 +42,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Disha.BHT — Portfolio BUT3",
+  title: "BHATIYA_Portfolio",
   description: "Portfolio de compétences BUT3 Informatique, Parcours A – RACDV, IUT Créteil-Vitry.",
 };
 

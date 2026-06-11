@@ -58,10 +58,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.bottom}>
-        <span className={styles.bottomText}>2025 © Disha.BHT</span>
-        <span className={styles.bottomText}>BUT3 Informatique · UPEC</span>
-      </div>
     </footer>
   );
 }
