@@ -132,6 +132,42 @@
   background: #161616;
 }
 
+/* ── Niveau blocks (affichage statique) ── */
+.niveauBlock {
+  margin-bottom: 8px;
+}
+
+.niveauBlockSep {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 0.5px solid #161616;
+}
+
+.niveauBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 16px;
+  border: 0.5px solid #666;
+  border-radius: 9999px;
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.niveauDesc {
+  font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 0 28px;
+}
+
 /* ── AC list ── */
 .acList {
   display: flex;

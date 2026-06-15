@@ -128,10 +128,32 @@
   overflow: hidden;
 }
 
+.imageWrapperLarge {
+  min-height: 420px;
+}
+
+.imageWrapperVideo {
+  min-height: 360px;
+}
+
 .image {
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0.8;
   transition: opacity 300ms ease;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 300ms ease;
+}
+
+.preuveRight:hover .video {
+  opacity: 1;
 }
 
 .preuveRight:hover .image {

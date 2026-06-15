@@ -12,15 +12,22 @@ interface Trace {
   fullWidth?: boolean;
 }
 
+interface Niveau {
+  id: string;
+  label: string;
+  description: string;
+  acs: AC[];
+}
+
 interface CompetencePageProps {
   num: string;
   eyebrow: string;
   titre: string;
-  sousTitre: string;
-  acs: AC[];
+  acs?: AC[];
   traces: Trace[];
   activeNav: "C1" | "C2" | "C6";
   tracesNode?: React.ReactNode;
+  niveaux?: Niveau[];
 }
 
 const navLinks = [
@@ -33,11 +40,11 @@ export default function CompetencePage({
   num,
   eyebrow,
   titre,
-  sousTitre,
-  acs,
+  acs = [],
   traces,
   activeNav,
   tracesNode,
+  niveaux,
 }: CompetencePageProps) {
   return (
     <div className={styles.page}>
@@ -50,11 +57,7 @@ export default function CompetencePage({
         <div className={styles.heroCenter}>
           <p className={styles.eyebrow}>{eyebrow}</p>
           <h1 className={styles.title}>{titre}</h1>
-          <p className={styles.subtitle}>{sousTitre}</p>
-          <span className={styles.pill}>Niveau 3</span>
         </div>
-
-
       </section>
 
       {/* 01 — AC */}
@@ -64,14 +67,31 @@ export default function CompetencePage({
           <div className={styles.sectionLabelLine} />
         </div>
 
-        <div className={styles.acList}>
-          {acs.map((ac) => (
-            <div key={ac.num} id={`ac${parseInt(ac.num.replace("AC", ""))}`} className={styles.acRow}>
-              <span className={styles.acNum}>{"AC" + parseInt(ac.num.replace("AC", ""))}</span>
-              <p className={styles.acText}>{ac.texte}</p>
+        {niveaux && niveaux.length > 0 ? (
+          niveaux.map((n, i) => (
+            <div key={n.id} className={`${styles.niveauBlock} ${i > 0 ? styles.niveauBlockSep : ""}`}>
+              <span className={styles.niveauBadge}>{n.label}</span>
+              <p className={styles.niveauDesc}>{n.description}</p>
+              <div className={styles.acList}>
+                {n.acs.map((ac) => (
+                  <div key={ac.num} className={styles.acRow}>
+                    <span className={styles.acNum}>{"AC" + parseInt(ac.num.replace("AC", ""))}</span>
+                    <p className={styles.acText}>{ac.texte}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          ))
+        ) : (
+          <div className={styles.acList}>
+            {acs.map((ac) => (
+              <div key={ac.num} id={`ac${parseInt(ac.num.replace("AC", ""))}`} className={styles.acRow}>
+                <span className={styles.acNum}>{"AC" + parseInt(ac.num.replace("AC", ""))}</span>
+                <p className={styles.acText}>{ac.texte}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* 02 — Traces */}
