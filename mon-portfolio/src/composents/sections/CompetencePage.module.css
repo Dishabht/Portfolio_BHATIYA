@@ -14,7 +14,7 @@
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #666;
+  color: #888;
   text-decoration: none;
   transition: color 200ms ease;
 }
@@ -56,11 +56,11 @@
 
 .eyebrow {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #7a7a8a;
+  color: #585868;
   margin: 0;
 }
 
@@ -77,26 +77,26 @@
 
 .subtitle {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #7a7a8a;
+  color: #585868;
   margin: 0;
 }
 
 .pill {
   display: inline-flex;
   align-items: center;
-  padding: 6px 18px;
-  border: 0.5px solid #8a8a9a;
+  padding: 7px 20px;
+  border: 0.5px solid #6a6a7a;
   border-radius: 9999px;
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #5a5a6a;
+  color: #484858;
   background: transparent;
 }
 
@@ -118,11 +118,11 @@
 
 .sectionLabelText {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #555;
+  color: #888;
   white-space: nowrap;
 }
 
@@ -146,24 +146,24 @@
 .niveauBadge {
   display: inline-flex;
   align-items: center;
-  padding: 5px 16px;
-  border: 0.5px solid #666;
+  padding: 6px 18px;
+  border: 0.5px solid #777;
   border-radius: 9999px;
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
   background: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .niveauDesc {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 13px;
-  color: #555;
-  line-height: 1.8;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.85;
   max-width: 680px;
   margin: 0 0 28px;
 }
@@ -178,7 +178,7 @@
   display: grid;
   grid-template-columns: 52px 1fr;
   gap: 24px;
-  padding: 18px 16px;
+  padding: 22px 16px;
   border-bottom: 0.5px solid #111;
   cursor: default;
   scroll-margin-top: 88px;
@@ -202,11 +202,11 @@
 
 .acNum {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #333;
+  color: #666;
   padding-top: 2px;
   transition: color 200ms ease;
 }
@@ -215,12 +215,12 @@
   font-family: var(--font-space), system-ui, sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #bbb;
-  line-height: 1.5;
+  color: #ccc;
+  line-height: 1.6;
   transition: color 200ms ease;
 }
 
-.acRow:hover .acNum  { color: #666; }
+.acRow:hover .acNum  { color: #999; }
 .acRow:hover .acText { color: #fff; }
 
 /* ── Traces (fallback) ── */
@@ -244,10 +244,10 @@
 
 .traceLabel {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #333;
+  color: #666;
   margin-bottom: 12px;
 }
 
@@ -255,7 +255,7 @@
   font-family: var(--font-space), system-ui, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #555;
+  color: #999;
   margin-bottom: 10px;
   transition: color 200ms ease;
 }
@@ -264,9 +264,9 @@
 
 .traceDesc {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 12px;
-  color: #333;
-  line-height: 1.6;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.7;
   margin-bottom: 16px;
 }
 
@@ -274,13 +274,13 @@
 
 .traceTag {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #333;
-  border: 0.5px solid #1a1a1a;
-  border-radius: 1px;
-  padding: 2px 8px;
+  color: #666;
+  border: 0.5px solid #2a2a2a;
+  border-radius: 2px;
+  padding: 3px 9px;
 }
 
 .traceArrow {
@@ -288,7 +288,7 @@
   bottom: 20px;
   right: 20px;
   font-size: 12px;
-  color: #333;
+  color: #666;
   transition: color 200ms ease, transform 200ms ease;
 }
 
@@ -305,18 +305,18 @@
 
 .analyseInnerLabel {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  color: #333;
+  color: #666;
   margin-bottom: 24px;
 }
 
 .analyseText {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: #888;
   line-height: 1.9;
   font-style: italic;
 }
@@ -326,14 +326,14 @@
   top: 20px;
   right: 20px;
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #333;
-  border: 0.5px solid #1e1e1e;
+  color: #666;
+  border: 0.5px solid #2e2e2e;
   padding: 3px 10px;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 /* ── Footer nav ── */
@@ -346,22 +346,22 @@
 
 .footerCopy {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #333;
+  color: #666;
 }
 
 .footerLinks { display: flex; gap: 24px; }
 
 .footerLink {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #333;
+  color: #777;
   text-decoration: none;
   transition: color 200ms ease;
 }

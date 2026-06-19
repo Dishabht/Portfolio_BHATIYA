@@ -64,12 +64,12 @@
 
 .skillBadge {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   letter-spacing: 0.04em;
-  color: #8a9190;
+  color: #a0a8a6;
   background: #1f2220;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 11px;
   border-radius: 4px;
   transition: color 0.2s, border-color 0.2s;
 }
@@ -96,8 +96,8 @@
 
 .progLabel {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  color: #555e5c;
+  font-size: 0.72rem;
+  color: #7a8280;
   min-width: 100px;
 }
 
@@ -119,8 +119,8 @@
 
 .progPct {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem;
-  color: #4a5452;
+  font-size: 0.7rem;
+  color: #6a7270;
   min-width: 28px;
   text-align: right;
 }

@@ -12,11 +12,11 @@
 
 .sectionLabelText {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #555;
+  color: #888;
   white-space: nowrap;
 }
 
@@ -36,11 +36,11 @@
 
 .acSepNum {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #333;
+  color: #666;
   white-space: nowrap;
 }
 
@@ -75,19 +75,19 @@
 
 .source {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #555;
+  color: #888;
   margin: 0 0 14px;
 }
 
 .texte {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 12px;
-  line-height: 1.8;
-  color: #aaa;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #bbb;
   margin: 0;
 }
 
@@ -95,14 +95,14 @@
   display: inline-block;
   margin-top: 20px;
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 1px;
-  color: rgba(255, 255, 255, 0.4);
-  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.65);
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
   background: transparent;
   text-decoration: none;
   align-self: flex-start;
@@ -110,8 +110,8 @@
 }
 
 .tag:hover {
-  color: rgba(255, 255, 255, 0.75);
-  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Droite */
@@ -180,8 +180,8 @@
 .imageCaption {
   padding: 8px 2px 0;
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 10px;
-  color: #444;
+  font-size: 11px;
+  color: #888;
   letter-spacing: 1px;
   margin: 0;
   flex-shrink: 0;
@@ -209,18 +209,18 @@
 }
 
 .acTagInter {
-  border: 0.5px solid #333;
-  color: #555;
+  border: 0.5px solid #444;
+  color: #888;
 }
 
 .acTagInter:hover {
   background: #111;
   color: #fff;
-  border-color: #555;
+  border-color: #666;
 }
 
 .acTagConf {
-  border: 0.5px solid #444;
+  border: 0.5px solid #555;
   color: #ccc;
 }
 

@@ -81,8 +81,8 @@ export default function TracesC2() {
         <div className={styles.sectionLabelLine} />
       </div>
 
-      {preuves.map((preuve) => (
-        <div key={preuve.source + preuve.tag} className={styles.preuveRow}>
+      {preuves.map((preuve, i) => (
+        <div key={i} className={styles.preuveRow}>
           <div className={styles.preuveLeft}>
             <div>
               <p className={styles.source}>{preuve.source}</p>

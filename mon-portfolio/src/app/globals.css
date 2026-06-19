@@ -9,6 +9,16 @@
   --tag-warm-border: #2a2018;
   --tag-neutral-color: #1e1e1e;
   --tag-neutral-border: #181818;
+
+  /* Contraste amélioré pour les textes sur fond sombre */
+  --text-on-dark-primary: rgba(255, 255, 255, 0.92);
+  --text-on-dark-secondary: rgba(255, 255, 255, 0.68);
+  --text-on-dark-muted: rgba(255, 255, 255, 0.45);
+
+  /* Contraste amélioré pour les textes sur fond clair */
+  --text-on-light-primary: #2d2d3d;
+  --text-on-light-secondary: #5a5a6a;
+  --text-on-light-muted: #7a7a8a;
 }
 
 *, *::before, *::after {
@@ -25,6 +35,8 @@ body {
   background: var(--cream);
   color: var(--navy);
   font-family: var(--font-space), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

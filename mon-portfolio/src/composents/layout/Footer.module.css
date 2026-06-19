@@ -19,25 +19,25 @@
 
 .label {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 14px;
 }
 
 .colLinks {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .colLink {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.62);
   text-decoration: none;
   transition: color 200ms ease;
 }
@@ -56,11 +56,11 @@ a.colLink:hover {
 
 .bottomText {
   font-family: var(--font-space), system-ui, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 @media (max-width: 768px) {

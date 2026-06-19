@@ -73,9 +73,9 @@
 }
 
 .cardDescription {
-  font-size: 0.88rem;
-  line-height: 1.7;
-  color: #8a9190;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #9aa09e;
   margin: 0 0 1.1rem;
 }
 
@@ -90,12 +90,12 @@
 
 .techBadge {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.04em;
-  color: #555e5c;
+  color: #7a8280;
   background: #1f2220;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 3px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 4px 10px;
   border-radius: 4px;
 }
 
