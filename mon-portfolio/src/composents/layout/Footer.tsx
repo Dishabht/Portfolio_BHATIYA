@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -8,9 +8,9 @@ export default function Footer() {
         <div className={styles.col}>
           <p className={styles.label}>Portfolio</p>
           <nav className={styles.colLinks}>
-            <Link href="/#profil" className={styles.colLink}>Profil</Link>
-            <Link href="/#competences-portfolio" className={styles.colLink}>Compétences</Link>
-            <Link href="/#contact" className={styles.colLink}>Contact</Link>
+            <a href="/#profil" className={styles.colLink}>Profil</a>
+            <a href="/#competences-portfolio" className={styles.colLink}>Compétences</a>
+            <a href="/#contact" className={styles.colLink}>Contact</a>
           </nav>
         </div>
 
@@ -26,9 +26,9 @@ export default function Footer() {
         <div className={styles.col}>
           <p className={styles.label}>Compétences</p>
           <nav className={styles.colLinks}>
-            <Link href="/competences/c1-realiser" className={styles.colLink}>C1 – Réaliser</Link>
-            <Link href="/competences/c2-optimiser" className={styles.colLink}>C2 – Optimiser</Link>
-            <Link href="/competences/c6-collaborer" className={styles.colLink}>C6 – Collaborer</Link>
+            <Link to="/competences/c1-realiser" className={styles.colLink}>C1 – Réaliser</Link>
+            <Link to="/competences/c2-optimiser" className={styles.colLink}>C2 – Optimiser</Link>
+            <Link to="/competences/c6-collaborer" className={styles.colLink}>C6 – Collaborer</Link>
           </nav>
         </div>
 

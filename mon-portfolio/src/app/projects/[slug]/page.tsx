@@ -1,39 +1,29 @@
-"use client";
-
-import { use, useState } from "react";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { myProjects } from "@/data/project";
 import styles from "./Page.module.css";
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
-
-// ── Utilitaire : transforme un chemin en titre lisible ──────────────────────
-// "/Echo/Diagramme_UML_Classe.drawio.png" → "Diagramme UML Classe"
 function pathToTitle(src: string): string {
   const filename = src.split("/").pop() ?? src;
   return filename
-    .replace(/\.[^.]+$/, "")        // retire la dernière extension (.png)
-    .replace(/\.[^.]+$/, "")        // retire une 2e extension (.drawio)
-    .replace(/[_-]+/g, " ")         // remplace _ et - par des espaces
-    .replace(/\b\w/g, (c) => c.toUpperCase()) // capitalise chaque mot
+    .replace(/\.[^.]+$/, "")
+    .replace(/\.[^.]+$/, "")
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase())
     .trim();
 }
 
-export default function ProjectPage({ params }: PageProps) {
-  const { slug } = use(params);
+export default function ProjectPage() {
+  const { slug } = useParams<{ slug: string }>();
   const project = myProjects.find((p) => p.slug === slug);
-  if (!project) notFound();
+  if (!project) return <Navigate to="/" replace />;
 
   return (
     <main className={styles.projectPage}>
 
       {/* ── Back nav ── */}
       <nav className={styles.backNav}>
-        <Link href="/#projets" className={styles.backLink}>
+        <Link to="/#projets" className={styles.backLink}>
           ← Tous les projets
         </Link>
       </nav>
@@ -120,7 +110,7 @@ export default function ProjectPage({ params }: PageProps) {
 
       {/* ── Footer ── */}
       <footer className={styles.pageFooter}>
-        <Link href="/#projets" className={styles.footerBack}>
+        <Link to="/#projets" className={styles.footerBack}>
           ← Retour aux projets
         </Link>
       </footer>
@@ -148,10 +138,10 @@ function Section({
     </section>
   );
 }
+
 function VideoPlayer({ src, styles }: { src: string; styles: Record<string, string> }) {
-  // Petite astuce pour ajouter les options YouTube automatiquement à ton lien
-  const autoPlayUrl = src.includes("?") 
-    ? `${src}&autoplay=1&mute=1` 
+  const autoPlayUrl = src.includes("?")
+    ? `${src}&autoplay=1&mute=1`
     : `${src}?autoplay=1&mute=1`;
 
   return (
@@ -159,7 +149,6 @@ function VideoPlayer({ src, styles }: { src: string; styles: Record<string, stri
       <iframe
         src={autoPlayUrl}
         className={styles.videoPlayer}
-        // "autoplay" doit être autorisé ici aussi pour que le navigateur accepte
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Démonstration du projet"
@@ -182,26 +171,23 @@ function DiagramGallery({
 
       {/* Image principale */}
       <div className={styles.galleryMain}>
-        <Image
+        <img
           src={diagrams[active]}
           alt={`${pathToTitle(diagrams[active])} — ${title}`}
-          fill
           className={styles.galleryImg}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain" }}
         />
 
-        {/* Titre du diagramme actif en bas à gauche */}
         <div className={styles.diagramTitle}>
           {pathToTitle(diagrams[active])}
         </div>
 
-        {/* Compteur en bas à droite */}
         <span className={styles.galleryCounter}>
           {active + 1} / {diagrams.length}
         </span>
       </div>
 
-      {/* Miniatures avec titre au survol */}
+      {/* Miniatures */}
       {diagrams.length > 1 && (
         <div className={styles.galleryThumbs}>
           {diagrams.map((src, i) => (
@@ -212,14 +198,12 @@ function DiagramGallery({
               className={`${styles.galleryThumb} ${i === active ? styles.galleryThumbActive : ""}`}
               onClick={() => setActive(i)}
             >
-              <Image
+              <img
                 src={src}
                 alt={pathToTitle(src)}
-                fill
                 className={styles.galleryThumbImg}
-                sizes="72px"
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
               />
-              {/* Label sous la miniature */}
               <span className={styles.thumbLabel}>
                 {pathToTitle(src)}
               </span>

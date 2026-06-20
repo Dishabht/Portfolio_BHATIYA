@@ -1,6 +1,4 @@
-"use client";
-
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { competences } from "@/data/competences";
 import styles from "./CompetenceList.module.css";
@@ -27,7 +25,7 @@ export default function CompetenceList() {
           {competences.map((comp, idx) => (
             <Link
               key={comp.id}
-              href={comp.href}
+              to={comp.href}
               className={`${styles.row} ${visible ? styles.in : ""}`}
               style={{ transitionDelay: `${idx * 80}ms` }}
               data-cursor-row=""

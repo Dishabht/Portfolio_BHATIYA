@@ -1,5 +1,5 @@
 import { Project } from "@/data/project";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }: { project: Project }) {
     return (
@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 ))}
             </div>
             <Link
-                href={`/projects/${project.slug}`}
+                to={`/projects/${project.slug}`}
                 className="text-blue-600 font-semibold hover:underline">
                     Voir les détails &rarr;
             </Link>

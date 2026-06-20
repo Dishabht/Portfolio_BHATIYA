@@ -1,4 +1,12 @@
+@import "tailwindcss";
+
 :root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-syne: 'Syne', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
+
   --cream: #eeebe4;
   --navy: #3d3d52;
   --navy-muted: #9a9aaa;

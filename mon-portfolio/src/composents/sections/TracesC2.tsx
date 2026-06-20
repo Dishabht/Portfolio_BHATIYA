@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import styles from "./TracesC1.module.css";
 
 interface AcLink {
@@ -120,12 +117,11 @@ export default function TracesC2() {
           <div className={styles.preuveRight}>
             <div className={styles.imageWrapper}>
               {preuve.image ? (
-                <Image
+                <img
                   src={preuve.image}
                   alt={preuve.imageTitre ?? ""}
-                  fill
-                  sizes="50vw"
                   className={styles.image}
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain" }}
                 />
               ) : (
                 <span className={styles.imagePlaceholder}>Image à venir</span>

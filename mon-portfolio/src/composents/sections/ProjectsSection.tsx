@@ -1,6 +1,4 @@
-"use client";
-
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { myProjects } from "@/data/project";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import styles from "./ProjectsSection.module.css";
@@ -21,7 +19,7 @@ export default function ProjectsSection() {
       <div className={styles.grid}>
         {myProjects.map((project, i) => (
           <Link
-            href={`/projects/${project.slug}`}
+            to={`/projects/${project.slug}`}
             key={project.id}
             className={`${styles.card} ${visible ? styles.cardIn : ""}`}
             style={{ transitionDelay: visible ? `${i * 130}ms` : "0ms" }}

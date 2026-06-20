@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import styles from "./CompetencePage.module.css";
 
 interface AC {
@@ -48,7 +48,7 @@ export default function CompetencePage({
 }: CompetencePageProps) {
   return (
     <div className={styles.page}>
-      <Link href="/" className={styles.back}>← Retour</Link>
+      <Link to="/" className={styles.back}>← Retour</Link>
 
       {/* Hero */}
       <section className={styles.hero}>
@@ -129,7 +129,7 @@ export default function CompetencePage({
           {navLinks.map((link) => (
             <Link
               key={link.id}
-              href={link.href}
+              to={link.href}
               className={`${styles.footerLink} ${activeNav === link.id ? styles.footerLinkActive : ""}`}
             >
               {link.label}
