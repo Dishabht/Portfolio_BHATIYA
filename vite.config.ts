@@ -3,8 +3,10 @@ import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'url'
 
 export default defineConfig({
-  base: '/Portfolio_BHATIYA/',
   plugins: [react()],
+  server: {
+    port: 3000,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
